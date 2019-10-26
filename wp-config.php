@@ -21,10 +21,10 @@ define('WP_AUTO_UPDATE_CORE', true);// This setting is required to make sure tha
 
 // ** MySQL settings ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'wp' );
+define( 'DB_NAME', 'ins-www' );
 
 /** MySQL database username */
-define( 'DB_USER', 'insdb' );
+define( 'DB_USER', 'ins-www' );
 
 /** MySQL database password */
 define( 'DB_PASSWORD', 'W3stp0rt#1' );

@@ -51,9 +51,7 @@ get_header();
 						<div id="post-<?php the_ID(); ?>" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" style="background-image: url( &quot;<?php the_post_thumbnail_url(); ?>&quot;)">
 						</div>	
 					</figure><!-- .post-thumbnail -->
-					<?php
-						the_post();
-					?>
+					<?php	//the_post();	?>
 				</div><!-- .site-featured-image -->
 			<?php endif; ?>
 

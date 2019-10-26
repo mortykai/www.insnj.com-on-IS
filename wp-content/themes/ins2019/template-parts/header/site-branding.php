@@ -13,7 +13,7 @@
 	</div><!-- .header-background -->
 
 	<?php if ( has_nav_menu( 'menu-1' ) ) : ?>
-		<nav id="site-navigation" class="main-navigation center-content expanded-true" aria-label="<?php esc_attr_e( 'Top Menu', 'twentynineteen' ); ?>">
+		<nav id="site-navigation" class="main-navigation center-content" aria-label="<?php esc_attr_e( 'Top Menu', 'twentynineteen' ); ?>">
 
 			<button class="main-navigation-button">
 				<svg preserveAspectRatio="none" viewBox="0 0 17 17">
@@ -22,7 +22,7 @@
 					<line x2="100%" class="center-line"></line>
 				</svg>
 			</button>			
-			
+			  
 			<div id="site-navigation-container" class="main-navigation-container">
 				<?php
 				wp_nav_menu(

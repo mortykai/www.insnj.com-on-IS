@@ -5,7 +5,7 @@
  Author:       Scott Morton
  Author URI:   http://example.com
  Template:     twentynineteen
- Version:      1.8.0
+ Version:      1.9.0
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -169,12 +169,41 @@ body {
 }
 
 /* @media only screen and (min-width: 768px){ */
-	
-	.entry .entry-content, .entry .entry-summary {
+
+
+.clear:after, .page-content:after, .entry-content:after, .comment-content:after, .site-header:after, .site-content:after, .site-footer:after {
+    clear: both;
+}
+.clear:before, .clear:after, .page-content:before, .page-content:after, .entry-content:before, .entry-content:after, .comment-content:before, .comment-content:after, .site-header:before, .site-header:after, .site-content:before, .site-content:after, .site-footer:before, .site-footer:after {
+    content: "";
+    display: table;
+    table-layout: fixed;
+}  
+
+	.entry .entry-content, .entry .entry-summary, article.page .page-content {
     max-width: 778px;
     margin: 0 auto;
 		padding: 0;
 	}
+  
+  
+  .entry .entry-content > *, .entry .entry-summary > *, article.page .page-content * {
+    margin: 32px 0;
+    margin-top: 32px;
+    margin-right: 0px;
+    margin-bottom: 32px;
+    margin-left: 0px;
+  }
+  
+  .error-404.not-found .search-form * {
+    margin-bottom: 15px;
+    margin-top: 0;
+  }
+  
+  .search-field {
+    color: #000;
+  }
+  
 	.site-logo {
 		margin-bottom: 0;
 		width: 212px;
@@ -325,8 +354,7 @@ body {
 	margin-bottom: -8px;
 }
 
-.entry .entry-content > *, .entry .entry-summary > * {
-    /* margin: unset; */
+.entry .entry-content > *, .entry .entry-summary > *, .error-404.not-found .page-content > * {
     max-width: none;
 }
 
@@ -457,7 +485,7 @@ body {
   }
 }
 
-.entry-header .phone{
+.entry-header .phone {
   color: #8B0000;
   font-size: 38px;
   font-weight: normal;
@@ -465,7 +493,7 @@ body {
   margin-top: -22px;
 }
 
-.entry-header .phone:before{
+.entry-header .phone:before {
   content: none;
 }
 
@@ -481,6 +509,45 @@ body {
 .entry-header {
 	margin-top: 40px;
 	margin-bottom: 72px;
+}
+
+.search-results .entry {
+  position: relative;
+  overflow: hidden;
+}
+
+.search-results .entry .post-thumbnail {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  /* z-index 1; */
+}
+
+.search-results .entry .entry-header {
+  /* margin-top: 11px; */
+  position: relative;
+  /* z-index: 1; */
+  /* padding: inherit; */
+}
+
+.search-results .entry .entry-title {
+  position: relative;
+  font-size: 28px;
+  /* text-align: left; */
+}
+
+.search-results .entry .entry-title::before {
+  content: none;
+}
+
+.search-results .entry .entry-content {
+  position: relative;
+  /* margin-top: -100px; */
+  /* z-index: -1; */
+  background: #283442;
+  margin: 0 10%;
+  padding: 0 60px;
 }
 
 .site-header.featured-image .site-branding-container:after
@@ -631,7 +698,7 @@ header .site-branding {
   transform: translateY(-100%);
 }
 
-body.page #site-navigation.main-navigation {
+#site-navigation.main-navigation {
 	/* margin-left: -25px; */
 	margin: 0;
 	padding: 10px 28px 64px 250px;
@@ -665,7 +732,7 @@ body.page #site-navigation.main-navigation {
 }
 
 @media only screen and (min-width: 1168px) {
-  body.page #site-navigation.main-navigation {
+  #site-navigation.main-navigation {
     padding-left: 319px;
   }
 }

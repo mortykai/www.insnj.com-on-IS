@@ -3,7 +3,6 @@
 add_action( 'wp_enqueue_scripts', 'ins2019_enqueue_styles' );
 function ins2019_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css', array(), '1.1');
-    //wp_enqueue_style( 'tm2-style', get_theme_file_uri() . '/tm2.css', array(), '1.1');
 		wp_deregister_script( 'twentynineteen-priority-menu');
 		wp_register_script( 'twentynineteen-priority-menu', get_theme_file_uri( '/js/priority-menu.js' ), array(), '1.1', true );
 		wp_deregister_script( 'twentynineteen-touch-navigation');
