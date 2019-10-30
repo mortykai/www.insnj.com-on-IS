@@ -5,7 +5,7 @@
  Author:       Scott Morton
  Author URI:   http://example.com
  Template:     twentynineteen
- Version:      1.9.0
+ Version:      1.11.0
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -186,13 +186,20 @@ body {
 		padding: 0;
 	}
   
-  
   .entry .entry-content > *, .entry .entry-summary > *, article.page .page-content * {
     margin: 32px 0;
     margin-top: 32px;
     margin-right: 0px;
     margin-bottom: 32px;
     margin-left: 0px;
+  }
+
+  .entry .entry-content > h4, .entry .entry-summary > h4, article.page .page-content h4 {
+    margin-bottom: 12px;
+  }
+
+  .entry .entry-content > h4 + *, .entry .entry-summary > h4 + *, article.page .page-content h4 + * {
+    margin-top: 0;
   }
   
   .error-404.not-found .search-form * {
@@ -800,13 +807,22 @@ header .site-branding {
 }
 
 #site-navigation.main-navigation > button .center-line {
-    transform: translateY(8.5px);
-    transition-property: opacity;
+  transform: translateY(8.5px);
+  transition-property: opacity;
+}
+#site-navigation.main-navigation.expanded-true > button .center-line {
+  opacity: 0;
 }
 
-#site-navigation.main-navigation.expanded-true > button .center-line {
-    opacity: 0;
+#site-navigation.main-navigation > button circle {
+  opacity: 0;
+  transition-property: opacity;
 }
+
+#site-navigation.main-navigation.expanded-true > button circle {
+  opacity: 1;
+}
+
 
 #site-navigation.main-navigation-container {
     display: none;

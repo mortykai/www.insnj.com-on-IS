@@ -20,6 +20,7 @@
 					<line x2="100%" class="top-line"></line>
 					<line x2="100%" class="bottom-line"></line>
 					<line x2="100%" class="center-line"></line>
+					<!-- <circle cx="50%" cy="50%" r="75%" fill="transparent"></circle> -->
 				</svg>
 			</button>			
 			  
