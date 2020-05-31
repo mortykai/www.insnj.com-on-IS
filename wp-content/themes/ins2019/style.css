@@ -5,7 +5,7 @@
  Author:       Scott Morton
  Author URI:   http://example.com
  Template:     twentynineteen
- Version:      1.11.0
+ Version:      1.12.0
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -1035,7 +1035,14 @@ header .site-branding {
 
 .site-header, .site-content, .site-footer, #tinymce {
 	font: normal normal normal 18px/1.4em avenir-lt-w01_35-light1475496,sans-serif;
-	color: #ffffff;
+}
+
+body, h1, h2, h3, h4, h5, h6, .home-content {
+  color: #ffffff;
+}
+
+.site-main {
+	color: #cacaca;
 }
 
 p {
